@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SAP &amp; Cloud Engineer Roadmap</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☁️</text></svg>" />
+</head>
+<body>
+
+<div class="bg-blobs" aria-hidden="true">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+</div>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark"></span>
+    <span>SAP <em>&amp;</em> Cloud</span>
+  </div>
+  <nav class="tabs">
+    <button class="tab-btn active" data-tab="roadmap">Roadmap</button>
+    <button class="tab-btn" data-tab="tracker">My Progress</button>
+    <button class="tab-btn" data-tab="about">About</button>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ROADMAP -->
+  <section id="roadmap" class="tab-panel active">
+
+    <div class="ticker" aria-hidden="true">
+      <span>SAP</span><i>·</i><span>cloud</span><i>·</i><span>S/4HANA</span><i>·</i><span>RISE</span><i>·</i><span>BTP</span><i>·</i><span>architecture</span>
+    </div>
+
+    <div class="hero">
+      <h1>Bringing <em>Structure</em><br />to the SAP Cloud Journey</h1>
+      <p>A step-by-step path from fundamentals to leading technical architecture for S/4HANA, RISE with SAP, and hybrid cloud landscapes — with a tracker that remembers where you are.</p>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-card glass">
+        <div class="stat-num">8</div>
+        <div class="stat-label">phases, in order</div>
+      </div>
+      <div class="stat-card glass">
+        <div class="stat-num" id="stat-skills">45</div>
+        <div class="stat-label">skills to master</div>
+      </div>
+      <div class="stat-card glass stat-accent">
+        <div class="stat-num"><span id="stat-pct">0</span><small>%</small></div>
+        <div class="stat-label">of your journey done</div>
+      </div>
+    </div>
+
+    <div id="roadmap-list" class="timeline"></div>
+  </section>
+
+  <!-- TRACKER -->
+  <section id="tracker" class="tab-panel">
+    <div class="hero hero-sm">
+      <h1>My <em>Progress</em></h1>
+      <p>Tap a status on any skill — it saves automatically in this browser. Add your own reference links with “+ Add link”.</p>
+    </div>
+
+    <div class="dashboard glass">
+      <div class="ring-wrap">
+        <div class="ring" id="ring"><div class="ring-inner"><span id="ring-pct">0%</span><small>complete</small></div></div>
+      </div>
+      <div class="dash-side">
+        <div class="dash-counts">
+          <div class="count-chip"><span class="dot dot-know"></span><b id="count-know">0</b> know</div>
+          <div class="count-chip"><span class="dot dot-learning"></span><b id="count-learning">0</b> learning</div>
+          <div class="count-chip"><span class="dot dot-to-learn"></span><b id="count-to-learn">0</b> to learn</div>
+        </div>
+        <div class="next-up" id="next-up"></div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <input id="search" type="text" placeholder="Search skills…" />
+      <select id="filter-status">
+        <option value="all">All statuses</option>
+        <option value="know">Know it</option>
+        <option value="learning">Learning</option>
+        <option value="to-learn">To learn</option>
+      </select>
+      <button id="export-btn" class="btn">Export</button>
+      <button id="import-btn" class="btn">Import</button>
+      <input id="import-file" type="file" accept="application/json" hidden />
+      <button id="reset-btn" class="btn btn-danger">Reset</button>
+    </div>
+
+    <div id="tracker-list" class="timeline timeline-flat"></div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="tab-panel">
+    <div class="hero hero-sm">
+      <h1>About this <em>tracker</em></h1>
+      <p>A personal learning companion for becoming an SAP Technical Architect / Cloud Engineer — covering ECC → S/4HANA migration, RISE with SAP, SAP BTP, hyperscaler infrastructure, and DevOps practice.</p>
+    </div>
+    <div class="about-cards">
+      <div class="glass about-card">
+        <h3>Private by design</h3>
+        <p>Progress and your custom links are stored locally in your browser (<code>localStorage</code>) — nothing is sent to a server.</p>
+      </div>
+      <div class="glass about-card">
+        <h3>Back it up</h3>
+        <p>Use <strong>Export</strong> to download your progress and links as JSON, and <strong>Import</strong> to restore them on another device or browser.</p>
+      </div>
+      <div class="glass about-card">
+        <h3>Make it yours</h3>
+        <p>Curated links ship with the roadmap in <code>data.js</code>; your own links live per skill via “+ Add link” on the My Progress tab.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <span>Built for tracking your SAP &amp; Cloud engineering journey.</span>
+</footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
